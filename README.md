@@ -27,7 +27,7 @@ Built by Stephanie Fernandes and Tiago Morreira
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Social Meters Screen Shot][product-screenshot]](https://live.staticflickr.com/65535/51141537955_23086e979b_n.jpg)
+[![Social Meters Screen Shot][product-screenshot]](https://live.staticflickr.com/65535/51141220439_cf3afc74ae_k.jpg)
 
  
 
@@ -74,4 +74,4 @@ To get a local copy up and running follow these simple example steps.
 * [React Native Async Storage](https://github.com/react-native-async-storage/async-storage)
 
  
-[product-screenshot]: https://live.staticflickr.com/65535/51141537955_23086e979b_n.jpg
+[product-screenshot]: https://live.staticflickr.com/65535/51141220439_cf3afc74ae_k.jpg
