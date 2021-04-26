@@ -34,7 +34,7 @@ We did so by using the user's Bluetooth to measure the distance between other us
 
 By maintaining the distance from other people the user will gain points that will be used for the group ranking. We also created our own API with NodeJS
 
-[![Social Meters Screen Shot][product-screenshot]](https://live.staticflickr.com/65535/51141220439_cf3afc74ae_k.jpg)
+[![Social Meters Screen Shot][product-screenshot]](https://live.staticflickr.com/65535/51141288479_e6d56e8e40_k.jpg)
 
  
 
@@ -81,4 +81,4 @@ To get a local copy up and running follow these simple example steps.
 * [React Native Async Storage](https://github.com/react-native-async-storage/async-storage)
 
  
-[product-screenshot]: https://live.staticflickr.com/65535/51141220439_cf3afc74ae_k.jpg
+[product-screenshot]: https://live.staticflickr.com/65535/51141288479_e6d56e8e40_k.jpg
