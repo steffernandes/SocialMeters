@@ -26,6 +26,13 @@ Built by Stephanie Fernandes and Tiago Morreira
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+Social Meters is a mobile app developed in my first semester of the second year of my degree in Design and Technologies of Mobile Apps.
+
+Due to the increase of COVID-19 cases worldwide, we were challenged to create an app to help the population. We noticed that it can be very hard for people to respect social distancing rules so we decided to create an app to gamify social distancing.
+
+We did so by using the user's Bluetooth to measure the distance between other users of the app. We also have a quiz to educate people about the COVID-19.
+
+By maintaining the distance from other people the user will gain points that will be used for the group ranking. We also created our own API with NodeJS
 
 [![Social Meters Screen Shot][product-screenshot]](https://live.staticflickr.com/65535/51141220439_cf3afc74ae_k.jpg)
 
