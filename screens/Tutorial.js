@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar, Image } from 'react-native';
-import AppButton from '../components/Button'
+import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar, Image } from 'react-native'; 
 import Title from '../components/Title'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { ScrollView, TouchableWithoutFeedback } from 'react-native-gesture-handler';

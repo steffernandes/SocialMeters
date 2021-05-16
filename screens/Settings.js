@@ -4,8 +4,7 @@ import Subtitle from '../components/Subtitle'
 import TitleWithCloseButton from '../components/TitleWithCloseButton'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { ScrollView, TouchableWithoutFeedback } from 'react-native-gesture-handler';
-import { Button, Paragraph, Dialog, Portal, Switch } from 'react-native-paper';
-//import currentUserData from '../utils/userData'
+import { Button, Paragraph, Dialog, Portal, Switch } from 'react-native-paper'; 
 
 const AccountOptions = [
     {
@@ -38,8 +37,7 @@ const ApplicationOptions = [
 
 function Settings({ navigation }) {
     const [userData, setUserData] = useState();
-    const [visible, setVisible] = useState(false);
-   /*  const [isSwitchOn, setIsSwitchOn] = useState(currentUserData.getVibrationValue); */
+    const [visible, setVisible] = useState(false); 
 
     useEffect(() => {
         const retrieveData = async () => {
@@ -56,11 +54,7 @@ function Settings({ navigation }) {
     const showDialog = () => setVisible(true);
 
     const hideDialog = () => setVisible(false);
-
-  /*   const onToggleSwitch = () => {
-        setIsSwitchOn(!isSwitchOn);
-        currentUserData.setVibration(!isSwitchOn)
-    } */
+ 
     const deleteAccount = () => {
         deleteUser(`https://covidapptf.herokuapp.com/users/${userData._id}`)
     }
@@ -77,18 +71,15 @@ function Settings({ navigation }) {
         }).then(response =>
             response.json()
         ).then(data => {
-            if (data) {
-                /* Verificar se existem erros */
+            if (data) { 
                 if (!data.success) {
                     alert("Não conseguimos apagar a sua conta. Tente novamente.")
                 } else {
                     logout()
                 }
-
             }
         }).catch(function (error) {
-            console.log('There has been a problem with your fetch operation: ' + error.message);
-            // ADD THIS THROW error
+            console.log('There has been a problem with your fetch operation: ' + error.message); 
             throw error;
         });
     }
@@ -114,8 +105,7 @@ function Settings({ navigation }) {
 
                 {ApplicationOptions.map((item, index) =>
                         <View style={styles.optionContainer} key={index}>
-                            <Text style={[styles.option, { color: item.color }]}>{item.title}</Text>
-                         {/*    <Switch style={{alignSelf: 'flex-end'}} value={isSwitchOn} onValueChange={onToggleSwitch} /> */}
+                            <Text style={[styles.option, { color: item.color }]}>{item.title}</Text> 
                         </View>
                 )}
                 <Subtitle>Informações da conta</Subtitle>
@@ -154,10 +144,8 @@ function Settings({ navigation }) {
                         </Dialog.Actions>
                     </Dialog>
                 </Portal>
-
             </SafeAreaView>
         </ScrollView>
-
     );
 }
 

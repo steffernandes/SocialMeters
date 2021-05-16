@@ -1,19 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { View, TextInput, StyleSheet, Image, SafeAreaView, Text, StatusBar, KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard, ScrollView } from 'react-native';
-import currentUserData from "../utils/userData"
 import AppButton from '../components/Button'
-import Title from '../components/Title'
-import AsyncStorage from '@react-native-async-storage/async-storage';
-
-
+import Title from '../components/Title' 
 
 const RecoverPassword = ({ route, navigation }) => {
     const [errorsList, setErrorsList] = React.useState([]);
     const [newPassword, onNewPasswordChange] = React.useState('');
     const [showPassword, setShowPassword] = useState(true)
-    const [PasswordIsFocused, setPasswordIsFocused] = useState(false)
-
-    //const [userData, setUserData] = React.useState();
+    const [PasswordIsFocused, setPasswordIsFocused] = useState(false) 
 
     let { email } = route.params;
     let updateErrors = [...errorsList];

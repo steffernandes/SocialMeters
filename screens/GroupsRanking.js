@@ -27,7 +27,6 @@ const GroupsRanking = ({ navigation }) => {
                 token = JSON.parse(data).token
                 /* Get the ids of the groups the user belongs to */
                 getUserGroups(`https://covidapptf.herokuapp.com/users/${JSON.parse(data)._id}`)
-                /* getUserGroups(`http://10.0.2.2:3000/users/${JSON.parse(data)._id}`) */
             } else {
                 navigation.replace("Login")
             }
@@ -36,7 +35,6 @@ const GroupsRanking = ({ navigation }) => {
     }, []);
 
     const getUserGroups = (url) => {
-        let tempArrayGroups = []
         fetch(url, {
             headers: {
                 "Content-Type": "application/json",
@@ -47,14 +45,10 @@ const GroupsRanking = ({ navigation }) => {
             .then(json => {
                 setNumberOfGroups(json.user.groups.length)
                 json.user.groups.map(group => {
-                    getGroup(`https://covidapptf.herokuapp.com/groups/${group}`)
-                    /* getGroup(`http://10.0.2.2:3000/groups/${group}`)
-                }) */
-
+                    getGroup(`https://covidapptf.herokuapp.com/groups/${group}`) 
                 })
             })
             .catch((error) => console.log(error))
-        //return tempArrayGroups
     }
 
     const getGroup = (url) => {
@@ -138,11 +132,6 @@ const GroupsRanking = ({ navigation }) => {
                         }
                     ]}
                     onStateChange={onStateChange}
-                    onPress={() => {
-                        if (open) {
-                            // do something if the speed dial is open
-                        }
-                    }}
                 />
             </Portal>
         </ScrollView>

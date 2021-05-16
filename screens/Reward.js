@@ -9,8 +9,7 @@ const Reward = ({ route, navigation }) => {
     const [userData, setUserData] = useState();
     const [rewardClaimed, setRewardClaimed] = useState(claimed);
     const [rewardUsed, setRewardUsed] = useState(false);
-    const remainingCoins = userCoins - rewardPrice
-    console.log(remainingCoins, rewardId, rewardTitle);
+    const remainingCoins = userCoins - rewardPrice 
 
     useEffect(() => {
         const retrieveData = async () => {

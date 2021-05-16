@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, TextInput, StyleSheet, Image, SafeAreaView, Text, StatusBar, KeyboardAvoidingView, TouchableWithoutFeedback, Keyboard, ScrollView } from 'react-native';
-import currentUserData from "../utils/userData"
 import AppButton from '../components/Button'
-import Title from '../components/Title'
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import Title from '../components/Title' 
 
 
 const RequestPasswordChange = ({ navigation }) => {
@@ -28,8 +26,7 @@ const RequestPasswordChange = ({ navigation }) => {
             response.json()
         ).then(data => {
             if (data) {
-                /* Verificar se existem erros */
-                console.log(data);
+                /* Verificar se existem erros */ 
                 if (!data.success) {
                     setFeedBackMessage("Ocorreu um erro a enviar o email de recuperação de password")
 

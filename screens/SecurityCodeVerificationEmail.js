@@ -3,8 +3,7 @@ import { View, TextInput, StyleSheet, Image, SafeAreaView, Text, StatusBar, Keyb
 import currentUserData from "../utils/userData"
 import AppButton from '../components/Button'
 import Title from '../components/Title'
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useRoute } from '@react-navigation/native';
+import AsyncStorage from '@react-native-async-storage/async-storage'; 
 
 
 const SecurityCodeVerificationEmail = ({ route, navigation }) => {
@@ -25,9 +24,7 @@ const SecurityCodeVerificationEmail = ({ route, navigation }) => {
         retrieveData()
     }, []);
 
-    const checkSecurityCode = () => {
-        console.log(code);
-        console.log(userData.email);
+    const checkSecurityCode = () => { 
         verifySecurityCode('https://covidapptf.herokuapp.com/update/security-code', {
             email: userData.email,
             code: code
@@ -46,9 +43,7 @@ const SecurityCodeVerificationEmail = ({ route, navigation }) => {
         }).then(response =>
             response.json()
         ).then(data => {
-            if (data) {
-                /* Verificar se existem erros */
-                console.log(data);
+            if (data) { 
                 if (!data.success) {
                     // Note: If the email already exists in the db, it also displays this message
                     setFeedBackMessage("Código de segurança incorreto")
@@ -56,13 +51,10 @@ const SecurityCodeVerificationEmail = ({ route, navigation }) => {
                     changeEmail(`https://covidapptf.herokuapp.com/update/${userData._id}/email`, {
                         newEmail: newEmail,
                     })
-
                 }
-
             }
         }).catch(function (error) {
-            console.log('There has been a problem with your fetch operation: ' + error.message);
-            // ADD THIS THROW error
+            console.log('There has been a problem with your fetch operation: ' + error.message); 
             throw error;
         });
     };
@@ -86,9 +78,7 @@ const SecurityCodeVerificationEmail = ({ route, navigation }) => {
         }).then(response =>
             response.json()
         ).then(data => {
-            if (data) {
-                /* Verificar se existem erros */
-                console.log(data);
+            if (data) { 
                 if (!data.success) {
                     setFeedBackMessage("Ocorreu um erro a enviar o email")
 
@@ -99,8 +89,7 @@ const SecurityCodeVerificationEmail = ({ route, navigation }) => {
 
             }
         }).catch(function (error) {
-            console.log('There has been a problem with your fetch operation: ' + error.message);
-            // ADD THIS THROW error
+            console.log('There has been a problem with your fetch operation: ' + error.message); 
             throw error;
         });
     };
@@ -117,22 +106,19 @@ const SecurityCodeVerificationEmail = ({ route, navigation }) => {
         }).then(response =>
             response.json()
         ).then(data => {
-            if (data) {
-                /* Verificar se existem erros */
-                console.log(data);
+            if (data) { 
                 if (!data.success) {
                     alert("Ocorreu um erro ao mudar o seu email!")
                 } else {
                     alert("O seu email foi alterado com sucesso!")
                     data.user.token = userData.token
-                    currentUserData.setUserData(data.user) // guarda os dados atualizados na local storage
+                    currentUserData.setUserData(data.user) 
                     navigation.navigate("Settings")
                 }
 
             }
         }).catch(function (error) {
-            console.log('Erro a realizar a função changeEmail: ' + error.message);
-            // ADD THIS THROW error
+            console.log('Erro a realizar a função changeEmail: ' + error.message); 
             throw error;
         });
     };
